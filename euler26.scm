@@ -14,7 +14,7 @@
                                (list (list (quotient (* n 10) k)) (+ 1 (- (length l) (length (member (remainder (* n 10) k) l))))))
                                ;(list (list (quotient (* n 10) k)) (list l (member (remainder (* n 10) k) l))))
                               (else (let ((v (schriftlich-rest  (cons (remainder (* n 10) k) l) k))) 
-                                    (list (cons (quotient (* n 10) k) (list-ref v 0)) (list-ref v 1))))
+                                    (list (cons (quotient (* n 10) k) (car v)) (cadr v))))
                               )
                             ))))
   (list (quotient n k)
