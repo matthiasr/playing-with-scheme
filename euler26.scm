@@ -17,7 +17,7 @@
                                     (list (cons (quotient (* n 10) k) (car v)) (cadr v))))
                               )
                             ))))
-  (list (quotient n k)
+  (cons (quotient n k)
                              (schriftlich-rest (list (remainder n k)) k)
                              )
   ))
