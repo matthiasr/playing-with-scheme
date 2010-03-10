@@ -22,9 +22,11 @@
                              )
   ))
 
-(let loop ((d 1) (maxd 1) (maxr 0))
-  (if (>= d 1000) (print "Max. Recurrence: " maxr " at d = " maxd #\newline)
+(define (main n) (let loop ((d 1) (maxd 1) (maxr 0))
+  (if (>= d n) (print "Max. Recurrence: " maxr " at d = " maxd #\newline)
     (let ((r (caddr (division 1 d))))
       (if (> r maxr)
         (loop (+ d 1) d r)
-        (loop (+ d 1) maxd maxr)))))
+        (loop (+ d 1) maxd maxr))))))
+
+(main 1000)
