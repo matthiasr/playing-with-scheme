@@ -33,4 +33,5 @@
 (define (perm l n) (if (= n 0) l (perm (next-perm l) (- n 1))))
 
 ; Project Euler #24
+(define (print . l) (for-each display l))
 (print (perm '(0 1 2 3 4 5 6 7 8 9) 999999) #\newline)

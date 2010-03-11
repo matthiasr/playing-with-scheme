@@ -4,6 +4,9 @@
 
 (define (undigit l) (if (null? l) 0 (+ (car l) (* 10 (undigit (cdr l))))))
 
+
+(define (print . l) (for-each display l))
+
 ;(define-struct div quot rem rec)
 (define (division n k) 
   (letrec ((schriftlich-rest (lambda (l k) (let ((n (car l)))
